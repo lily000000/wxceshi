@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="yes" name="app-moblie-web-app-capable">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/bind-device.css" />
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../css/mui.picker.min.css" />
+		<script type="text/javascript" src="../js/myjs.js" ></script>
+		<title>设备信息</title>
+	</head>
+	<body>
+		<div class="tit_wrap">
+			<div class="area_wrap">
+				<div id='showUserPicker'>
+					<div class="mui-center">
+						<span>区域：</span>
+					    <input class="mui-navigate-right ui-alert" id='areaResult' placeholder="请选择区域" value="" onfocus="this.blur();">
+					</div>
+						
+				</div>
+				<div id='showUserPicker2'>
+					<div class="mui-center">
+						<span>市级：</span>
+					    <input class="ui-alert" id='areaResult2' placeholder="请选择市级" value="" onfocus="this.blur();">	
+					</div>
+					
+				</div>
+				<div id='showUserPicker3'>
+					<div class="mui-center">
+						<span>区县：</span>
+					    <input class="ui-alert" id='areaResult3' placeholder="请选择区县" value="" onfocus="this.blur();">	
+					</div>
+					
+				</div>
+				<div id='showUserPicker4'>
+					<div class="mui-center">
+						<span>街道：</span>
+					    <input class="ui-alert" id='areaResult4' placeholder="请选择街道" value="" onfocus="this.blur();">
+					</div>
+						
+				</div>
+				<div id='showUserPicker5'>
+					<div class="mui-center">
+						<span>门店：</span>
+					    <input class="ui-alert" id='areaResult5' placeholder="请选择门店" value="" onfocus="this.blur();" >	
+					</div>
+					
+				</div>
+				<div class="store">
+					<p>门店负责人电话：<span>188888888</span></p>
+					<p>开户人员：<span>李四</span></p>
+					<p>联系电话：<span>1999999999</span></p>
+				</div>
+				<div id='showUserPicker6'>
+					<div class="mui-center">
+						<span>选择机型：</span>
+					    <input class="ui-alert" id='areaResult6' placeholder="请选择机型" value="" onfocus="this.blur();" >	
+					</div>
+					
+				</div>
+				<div class="model">
+					<p>ID：<span>1002</span> 型号YC_1</p>
+					<p>规格<span>XXXXXXXXXXX</span></p>
+				</div>
+				<div class="bindsim">
+					<div class="mui-center">
+						<span>绑定SIM卡：</span>
+				     	<input class="ui-alert lastr"  placeholder="请输入SIM卡" value="" >
+					</div>
+						
+				</div>
+			</div>
+			<div class="submit">
+				<button class="seach">提交</button>
+			</div>
+			
+		</div>
+
+		<script type="text/javascript" src="../js/jquery-1.12.3.js" ></script>
+		<script src="../libs/mui.min.js"></script>
+		<script src="../libs/mui.picker.js"></script>
+		<script src="../libs/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../libs/mui.picker.min.js" ></script>
+		<script>
+			(function($, doc,$$) {
+				$.init();
+				$.ready(function() {
+					/**
+					 * 获取对象属性的值
+					 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+					 * @param {Object} obj 对象
+					 * @param {String} param 属性名
+					 */
+					var _getParam = function(obj, param) {
+						return obj[param] || '';
+					};
+					//区域
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '华东区'
+					}, {
+						value: 'aaa',
+						text: '西湖区'
+					}, {
+						value: 'lj',
+						text: '下沙'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var areaResult = doc.getElementById('areaResult');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							areaResult.value = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//市级
+					//-----------------------------------------
+					var userPicker2 = new $.PopPicker();
+					userPicker2.setData([{
+						value: 'ywj',
+						text: '杭州市'
+					}, {
+						value: 'aaa',
+						text: '杭州市'
+					}, {
+						value: 'lj',
+						text: '杭州市'
+					}]);
+					var showUserPickerButton2 = doc.getElementById('showUserPicker2');
+					var areaResult2 = doc.getElementById('areaResult2');
+					showUserPickerButton2.addEventListener('tap', function(event) {
+						userPicker2.show(function(items) {
+							areaResult2.value = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+			
+					var userPicker3 = new $.PopPicker();
+					userPicker3.setData([{
+						value: 'ywj',
+						text: '余杭区'
+					}, {
+						value: 'aaa',
+						text: '文二路'
+					}, {
+						value: 'lj',
+						text: '文三路'
+					}]);
+					var showUserPickerButton3 = doc.getElementById('showUserPicker3');
+					var areaResult3 = doc.getElementById('areaResult3');
+					showUserPickerButton3.addEventListener('tap', function(event) {
+						userPicker3.show(function(items) {
+							areaResult3.value = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+			       //街道
+					var userPicker4 = new $.PopPicker();
+					userPicker4.setData([{
+						value: 'ywj',
+						text: '五常街道'
+					}, {
+						value: 'aaa',
+						text: '宝塔村'
+					}, {
+						value: 'lj',
+						text: '文三路'
+					}]);
+					var showUserPickerButton4 = doc.getElementById('showUserPicker4');
+					var areaResult4 = doc.getElementById('areaResult4');
+					showUserPickerButton4.addEventListener('tap', function(event) {
+						userPicker4.show(function(items) {
+							areaResult4.value = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//选择门店
+					var userPicker5 = new $.PopPicker();
+					userPicker5.setData([{
+						value: 'ywj',
+						text: '西溪店'
+					}, {
+						value: 'aaa',
+						text: '文二路'
+					}, {
+						value: 'lj',
+						text: '文三路'
+					}]);
+					var showUserPickerButton5 = doc.getElementById('showUserPicker5');
+					var areaResult5 = doc.getElementById('areaResult5');
+					showUserPickerButton5.addEventListener('tap', function(event) {
+						userPicker5.show(function(items) {
+							areaResult5.value = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+							$$('.store').css('display','block')
+						});
+					}, false);
+					
+					//选择机型
+					var userPicker6 = new $.PopPicker();
+					userPicker6.setData([{
+						value: 'ywj',
+						text: 'YC_1'
+					}, {
+						value: 'aaa',
+						text: 'YC_2'
+					}, {
+						value: 'lj',
+						text: 'YC_3'
+					}]);
+					var showUserPickerButton6 = doc.getElementById('showUserPicker6');
+					var areaResult6 = doc.getElementById('areaResult6');
+					showUserPickerButton6.addEventListener('tap', function(event) {
+						userPicker6.show(function(items) {
+							areaResult6.value = items[0].text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+							$$('.model').css('display','block')
+						});
+					}, false);
+			
+				});
+				
+				
+
+				
+			})(mui, document,jQuery);
+						
+		</script>
+		
+	</body>
+</html>

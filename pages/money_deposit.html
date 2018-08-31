@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta content="yes" name="app-moblie-web-app-capable">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/money_deposit.css" />
+    <script type="text/javascript" src="../js/myjs.js" ></script>
+	<title>提现</title>
+	
+</head>
+	<body onload="document.getElementById('inputTxt').focus()">
+		<div class="content">
+			<div class="cont">
+				<div class="cont-wrap">
+					<div class="top">
+					  <span class="topr">今日收益(元)</span>
+					  <div class="math">
+						<span>300.00</span>
+					   </div>
+					</div>
+					
+					<div class="top">
+					  <span class="topr">累计收益(元)</span>
+					  <div class="math">
+						<span>300.00</span>
+					  </div> 
+					</div>					
+				</div>
+				<div class="process">
+					<div class="left">
+						<p>可提现金额（元）</p>
+						<p>10000.00元</p>
+					</div>
+					<div class="right">
+						<p>累计提现（元）</p>
+						<p>18150.00元</p>
+					</div>
+				</div>
+			</div>
+			<div class="con" onclick=javascript:jump1()>
+				<span>提现明细</span>
+				<div class="pic"><img class="direction" src="../images/right.png"/></div>
+			</div>
+			<div class="con">
+				<div class="deposit">
+					<div class="account">
+						<span>输入提现金额（元）:</span>
+					    <input type="text" value="" placeholder="请输入提现金额" onfocus="true" id="inputTxt"/>
+					</div>
+					
+					<div class="formula">
+						<div class="txt">
+							注：提现金额说明
+						</div>
+					</div>
+					<div class="account-submit">
+						<button class="depti">提现</button>
+					</div>
+					
+					
+				</div>
+				
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../js/jquery-1.12.3.js" ></script>
+
+<script type="text/javascript">
+	function jump1(){
+        window.location.href="extract_details.html";
+    }
+//	function jump2(){
+//      window.location.href="cash.html";
+//  }
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="yes" name="app-moblie-web-app-capable">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/monthly-report.css" />
+		<script type="text/javascript" src="../js/myjs.js" ></script>
+		<title>销售明细</title>
+		<style>
+			.sale-table{
+				margin: 0 .1rem;
+			}
+			.nav-wrap{
+				background: #4A9CF8;
+				color: #fff;
+				font-size: .4rem;
+				text-align: center;
+				line-height: .88rem;
+				display: flex;
+				justify-content: space-around;
+				position: relative;
+			}
+			.nav-wrap p{
+				font-size: .35rem;
+				color: #fff;
+				
+			}
+			.nav-wrap .mui-icon-arrowleft{
+				margin-left: .6rem;
+			}
+			.nav-wrap .mui-icon-arrowright{
+				margin-right: .6rem;
+			}
+			.nav-wrap span{
+				display: inline-block;
+				line-height: .88rem;
+			}
+			.nav-wrap img{
+				width: .35rem;
+			    height: .35rem;
+			    position: absolute;
+			    left: .2rem;
+			    top: .25rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="heard">
+			<div class="nav-wrap">
+				<img src="../images/back.png" / class="goback">
+				<span class="mui-icon mui-icon-arrowleft"></span>
+				<p>2018-08-01(5条)</p>
+				<span class="mui-icon mui-icon-arrowright"></span>
+			</div>
+			
+			
+		</div>
+		<div class="sale-table">
+			<table>
+				<tr>
+					<td>订单编号</td>
+					<td>出货时间</td>
+					<td>支付方式</td>
+					<td>金额</td>
+					<td>出货状态</td>
+					
+				</tr>
+				<tr class="consume-detail">
+					<td>10000101010</td>
+					<td>11:00</td>
+					<td>支付宝</td>
+					<td>￥100</td>
+					<td>出货成功</td>
+				</tr>
+				<tr class="consume-detail">
+					<td>10000101010</td>
+					<td>11:00</td>
+					<td>支付宝</td>
+					<td>￥100</td>
+					<td>出货成功</td>
+				</tr>
+			
+			</table>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.3.js" ></script>
+	<script>
+		$('.goback').on('click',function(){
+			window.location.href ='consume-detail.html'
+					
+		})
+	</script>
+</html>

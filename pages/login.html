@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="yes" name="app-moblie-web-app-capable">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<script type="text/javascript" src="../js/myjs.js" ></script>
+	<script type="text/javascript" src="../js/jquery-1.12.3.js"></script>
+	<title>登录</title>
+</head>
+<body>
+	<div class="logo">
+	   <img src="img/logo.png">
+	</div>
+	<div>
+		<form action="" method="get">
+			<ul class="phone_wrap">
+				<li>
+					<label>账号
+					    <input type="phone" name="" placeholder="请输入您的账号" id="phone">
+					</label>
+				</li>
+				<li>
+					<label>密码
+					    <input type="text" name="" placeholder="请输入的密码" style="width: 4rem;" class='yan'>
+					</label>
+					<!--<input type="button" class="hmac" value="获取验证码">-->
+					
+				</li>
+			</ul>		
+		</form>
+		<P class="warn">提示：哈哈哈哈哈哈哈哈哈哈哈哈</P>
+	</div>
+	<div class="login">
+		<input type="button" name="" value="登录">
+	</div>
+	<div class="prompt_wrap">
+		<div class="prompt_tit">
+			<p class="pho">请输入正确的手机号码</p>
+			<p class="pht">好的</p>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+	//限制手机号码的长度
+	$('.login').click(function(){
+		if($('#phone').val() == '' || $('.yan').val() == ''){
+		    $('.prompt_wrap').css('display','block')
+		}else{
+			$('.prompt_wrap').css('display','none')
+		}
+	})
+	$('.pht').click(function(){
+		$('.prompt_wrap').css('display','none')
+	})
+	
+
+</script>
+</html>

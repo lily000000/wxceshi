@@ -1,0 +1,187 @@
+body,html{
+	background: #fff;
+	font-family: 'Helvetica Neue',Helvetica,sans-serif;
+}
+.tit_wrap{
+	width: 100%;
+    line-height: .8rem;
+    margin: auto;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    margin-top: .2rem;
+}
+.area_wrap{
+	display: flex;
+    justify-content: space-between;
+}
+.tit_wrap div{
+	font-size: .3rem;
+}
+.mui-icon-arrowdown:before {
+    font-size: .3rem;
+    content: '\e581';
+}
+/*#showUserPicker{
+	float: left;
+}*/
+/*#showUserPicker2{
+	margin-left: .3rem;
+}*/
+.sales-money{
+	display: flex;
+	justify-content: space-around;
+}
+.sales-tit{
+	width: 100%;
+}
+.sales-tit p:nth-child(1){
+/*	text-indent: .3rem;*/
+    font-size: .32rem;
+    color: #000;
+    text-align: center;
+}
+.sales-tit p:nth-child(2){
+	text-align: center;
+	font-size: .6rem;
+    color: #007aff;
+    margin-top: .2rem;
+}
+.sales-money{
+	width: 50%;
+	margin: auto;
+	margin-top: .4rem;
+}
+.sales-money li{
+	text-align: center;
+	color: #000;
+}
+.sales-money li p{
+	text-align: center;
+	color: #000;
+}
+.sales-money li p:nth-child(1){
+	font-size: .24rem;
+	color: #000;
+}
+.sales-details{
+    margin: auto;
+    /* background: #E6F4FC; */
+    padding-top: .4rem;
+    padding-bottom: .4rem;  
+}
+.sale-table table{
+	text-align: center;
+	width: 100%;
+	margin: auto;
+}
+.sale-table table tr:nth-child(1){
+	color: #oooo;
+	border-top: 1px solid #eeeeee;
+	font-size: .3rem;
+}
+.sale-table table tr:nth-child(1) td{
+	color: #333333;
+	font-size: .3rem;
+	font-weight: bold;
+}
+.sale-table table tr{
+	border-bottom: 1px solid #eeeeee;
+	line-height: .8rem;
+	font-size: .24rem;
+}
+.sale-table table tr td{
+	text-align: center;
+	color: #5d5d5d;
+}
+.sale-table{
+	margin-top: .4rem;
+	text-align: center;
+	margin: .2rem .2rem .2rem .2rem;
+   
+}
+.mui-btn {
+	font-size: 16px;
+	padding: 8px;
+	margin: 3px;
+}
+h5.mui-content-padded {
+	margin-left: 3px;
+	margin-top: 20px !important;
+}
+h5.mui-content-padded:first-child {
+	margin-top: 12px !important;
+}
+.ui-alert {
+	text-indent: .3rem;
+	padding: .2rem .1rem;
+	font-size: .26rem;
+}
+header a{
+	font-size: .16rem !important;
+	color: #197DEC !important;
+}
+.ui-alert{
+	border: 1px solid #D9D9D9;
+    border-radius: .1rem;
+    height: .6rem;
+    text-indent: .05rem;
+    color: #333333;
+    background: none;
+    width: 2.3rem;
+    background:url(../images/xiangxia2.png) right no-repeat;
+    background-size: .2rem .1rem;
+    background-position-x: 1.9rem;
+    padding-right: .20rem;
+} 
+.submit{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+}
+.seach{
+	width:80%;
+    height: .8rem;
+    background: #4A9CF8;
+   /* line-height: .8rem;*/
+    font-size: .3rem;
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    margin-top: .2rem;
+    border: none;
+    border-radius: .44rem;
+
+    /*display: flex;
+   justify-content: center;
+   align-items: center;*/
+}   
+@media screen and (max-width: 320px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+    .ui-alert{
+		width: 1.8rem;
+    }
+}
+.stores-information{
+	width: 100%;
+	font-size: .3rem;
+	padding-left: .3rem;
+    padding-right: .3rem;
+    line-height: .6rem;
+    border-top: 1px solid #eeeeee;
+    margin-top: .3rem;
+}
+.bind-new{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: .3rem;
+	
+}
+.bind-new button{
+	background: #ff9800;
+	border: none;
+	color: #fff;
+	margin-right: .3rem;
+}
+.stores-information{
+	display: none;
+}

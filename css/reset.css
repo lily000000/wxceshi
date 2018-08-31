@@ -1,0 +1,114 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-family: "arial, helvetica, sans-serif";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+dl,ul,ol,menu,li {list-style:none}   /* 重置类表前导符号为onne,menu在HTML5中有效 */
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+	outline: none;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 50px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img,
+embed,
+object,
+audio,
+video {
+	height: auto;
+	max-width: 100%;
+}
+
+iframe {
+	border: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+	text-align: left;
+}
+
+html,
+body {
+	/*height: 100%;*/
+	/*width: 7.5rem;*/
+	/*overflow-x: hidden;*/
+	margin: auto;
+	background: #fff;
+	font-family: 'Helvetica Neue',Helvetica,sans-serif;
+}
+
+
+/*
+.vue-body{
+	padding-top: 44px;
+}*/
+
+
+header a {
+	color: #333333;
+	font-size: 0.48rem !important
+}
+
+.mui-ios .mui-dtpicker-body {
+perspective: none!important;
+transform-style: flat!important;
+-webkit-perspective:none!important;
+-webkit-transform-style:flat!important;
+}

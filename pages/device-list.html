@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="yes" name="app-moblie-web-app-capable">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/device-list.css" />
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../css/mui.picker.min.css" />
+		<script type="text/javascript" src="../js/myjs.js" ></script>
+		<title>设备列表</title>
+	</head>
+	<body>
+		<div class="sales-details">
+			<div class="sales-tit">
+			    <p>设备在线/离线（数量）</p>
+			    <p><span>20</span>/<span>30</span></p>
+			</div>
+		</div>
+		<div class="tit_wrap">
+			<div class="area_wrap">
+				<div id='showUserPicker'>
+					<span>区域：</span>
+					<input class="mui-navigate-right ui-alert" id='areaResult' placeholder="请选择区域" value="" onfocus="this.blur();">	
+				</div>
+				<div id='showUserPicker2'>
+					<span>市级：</span>
+					<input class="ui-alert" id='areaResult2' placeholder="请选择市级" value="" onfocus="this.blur();">	
+				</div>
+			</div>
+			<div class="area_wrap">
+				<div id='showUserPicker3'>
+					<span>区县：</span>
+					<input class="ui-alert" id='areaResult3' placeholder="请选择区县" value="" onfocus="this.blur();">	
+				</div>
+				<div id='showUserPicker4'>
+					<span>街道：</span>
+					<input class="ui-alert" id='areaResult4' placeholder="请选择街道" value="" onfocus="this.blur();">	
+				</div>
+			</div>
+			<div class="area_wrap">
+				<div id='showUserPicker5'>
+					<span>门店：</span>
+					<input class="ui-alert" id='areaResult5' placeholder="请选择门店" value="" onfocus="this.blur();" onclick="shopEven">	
+				</div>
+			</div>
+		</div>
+		
+		<div class="stores-information">
+			<ul>
+				<li>门店负责人电话：15555555555</li>
+				<li>开户人员：李四</li>
+				<li>联系电话：1888888888</li>
+				<li>运维人员：小红</li>
+				<li>联系电话：1888888888</li>
+			</ul>
+			
+		</div>
+		<div class="submit">
+		    <button class="seach">查询</button>
+		</div>
+	
+		<div class="bind-new">
+			<button>新设备绑定</button>
+		</div>
+		<div class="sale-table">
+			<table>
+				<tr>
+					<td>设备ID</td>
+					<td>门店名称</td>
+					<td>设备型号</td>
+					<td>SIM卡</td>
+					<td>状态</td>
+				</tr>
+				<tr>
+					<td>10010</td>
+					<td>西溪湿地店</td>
+					<td>YNN</td>
+					<td>2111000</td>
+					<td>在线</td>
+				</tr>
+				<tr>
+					<td>10010</td>
+					<td>西溪湿地店</td>
+					<td>YNN</td>
+					<td>2111000</td>
+					<td>离线</td>
+				</tr>
+			</table>
+			
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.3.js" ></script>
+		<script src="../libs/mui.min.js"></script>
+		<script src="../libs/mui.picker.js"></script>
+		<script src="../libs/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../libs/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="../js/deviceList.js" ></script>
+		<script>
+			
+			
+		</script>
+		
+	</body>
+</html>

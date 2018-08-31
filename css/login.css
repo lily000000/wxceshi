@@ -1,0 +1,329 @@
+
+body{
+    margin: 0 auto;
+    width: 7.5rem;
+    font-size: .32rem;
+    font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
+    height: 100%;
+    max-width: 1080px;
+    color: #333333;
+    background: #F5F5F9;
+    /*position: relative;*/
+    /*overflow-y: hidden; */
+}
+input{
+	border: none;
+	background: none;
+
+}
+html{
+	background: #F5F5F9;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+}
+.one .wrap_tit:nth-child(1){
+	margin-top: .22rem;
+}
+.wrap_tit{
+	padding-left: .2rem;
+	height: 1rem;
+	background: #FFFFFF;
+	border-bottom: 1px solid #eeeeee;
+}
+.left_machine{
+	width: 6rem;
+	float: left;
+	font-size: .28rem;
+	color: rgba(24,24,24,0.90);
+
+}
+
+.left_machine p:nth-child(1){
+	padding-top: .2rem;
+}
+.left_machine p{
+	width: 6rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	white-space: nowrap;
+}
+.left_machine p:nth-child(2){
+	font-size: .26rem;
+	color: rgba(98,98,98,0.90);
+	line-height: .45rem;
+}
+.right_icon{
+	float: right;
+	margin-top: .3rem;
+	margin-right: .3rem;
+}
+.iconfont{
+	font-size: .32rem;
+	color: #979797;
+
+}
+.chat{
+	background: #ffffff;
+	display: none;
+
+}
+svg{
+	padding-top: .1rem;
+}
+#container{
+	height: 5rem;
+	margin: auto;
+}
+#cont{
+	height: 5rem;
+	margin: auto;
+}
+.chat p{
+	text-align: center;
+	font-size: .28rem;
+	color: #181818;
+	padding-top: .25rem;
+}
+.one:nth-child(1){
+	margin-bottom:.2rem;
+	border-top: 1px solid #eeeeee; 
+}
+.one{
+	border-top: 1px solid #eeeeee; 
+}
+/*机器历史运营状况样式*/
+.logo{
+	width: 1.485rem;
+	height: 1.485rem;
+	margin: auto;
+	margin-top:1.214rem;
+	margin-bottom: 1.201rem;
+}
+.logo img{
+	width: 100%;
+}
+.phone_wrap{
+	height: 2.06rem;
+	background: #FFFFFF
+}
+.phone_wrap li{
+	height: 1.02rem;
+	line-height: 1.02rem;
+	text-indent: .3rem;
+	border-bottom: 1px solid #eeeeee;
+}
+.phone_wrap li input{
+	font-size: .30rem;
+	text-indent: .3rem;
+	line-height: .5rem;
+	color: rgba(24,24,24,0.90);
+
+}
+.phone_wrap li .hmac{
+	width: 1.8rem;
+	height: .6rem;
+	text-indent: 0rem;
+	line-height: .6rem;
+	border: 1px solid #68371D;
+	border-radius: .29rem;
+	font-size: .24rem;
+	color: #68371D;
+	
+	background: none;
+	cursor: pointer;
+}
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; } 
+.warn{
+	width: 7.1rem;
+	font-size: .23rem;
+	color: rgba(136,136,136,0.90);
+	margin: auto;
+	margin-top: .2rem;
+	line-height: .3rem;
+}
+.login{
+	width: 6.5rem;
+	height: .88rem;
+	line-height: .88rem;
+	margin: auto;
+	text-align: center;
+	background: #4A9CF8;
+	border-radius: 44px;
+	margin-top: .74rem;
+
+}
+.login input{
+	font-size: .36rem;
+	color: rgba(255,255,255,0.90);
+}
+.prompt_wrap{
+	width: 7.5rem;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+	display: none;
+	z-index: 998;
+}
+.prompt_tit{
+	background: #ffffff;
+	border-radius: .10rem;
+	margin: auto;
+	width: 5.4rem;
+	height: 2.6rem;
+	margin-top: 5rem;
+	font-size: .28rem;
+	color: #181818;
+	line-height: .46rem;
+	text-align: center;
+
+}
+.prompt_tit .pho{
+	/*padding-top: .5rem;
+	padding-bottom: .6rem;*/
+	line-height: 1.57rem;
+	border-bottom: 1px solid #eeeeee;
+}
+.prompt_tit .pht{
+	padding-top: .1rem;
+	padding-bottom: .41rem;
+	font-size: .34rem;
+	color: #0076FF;
+	line-height: .87rem;
+	font-weight:700;
+}
+/*登录的样式*/
+.machine{
+	background: #ffffff;
+}
+.all_rout{
+	width: 7.5rem;
+	height: .88rem;
+	border-bottom: 1px solid #eeeeee;
+	position: relative;
+}
+.all_tit{
+	font-size: .30rem;
+	color: rgba(24,24,24,0.90);
+	margin-left: .2rem;
+	line-height: .88rem;
+}
+.all_rout p{
+	float: left;
+}
+.all_rout .xiala{
+	width: .2rem;
+	height: .12rem;
+	float: left;
+	margin-left: .3rem;
+	margin-top: .35rem;
+}
+.all_rout .xiala img{
+	width: 100%;
+}
+.rout{
+	width: 7.5rem;
+	height: 100%;
+  margin: auto;
+	position: absolute;
+	z-index: 99999;
+	background: rgba(0,0,0,0.5);
+	display: none;
+	 overflow:hidden;
+}
+.rout ul{
+	width: 100%;
+	/*height: 4.04rem;*/
+	background: #ffffff;
+}
+
+.rout ul li{
+	width: 7.1rem;
+	margin: auto;
+	height: 1rem;
+	border-bottom: 1px solid #eeeeee;
+	/*padding-left:.5rem;background:url(../img/buxuan.png) no-repeat;*/
+}
+.icon_img{
+	width: .4rem;
+	height: .4rem;
+	float: left;
+	margin-top: .3rem;
+	margin-right: .3rem;
+}
+.icon_img img{
+	width: 100%;
+}
+.rout ul li:nth-child(1){
+	line-height: 1rem;
+}
+.rout ul li .tit_wrap{
+	padding-top: .18rem;
+	font-size: .28rem;
+	line-height: .3rem;
+	float: left;
+}
+.rout ul li p:nth-child(1){
+	line-height: .3rem;
+}
+.rout ul li p:nth-child(2){
+	font-size: .24rem;
+	margin-bottom: .14rem;
+	color: rgba(24,24,24,0.90);
+}
+/*选择线路*/
+.forehead{
+	width: 7.5rem;
+	height: 2.4rem;
+	background: #ffffff;
+	margin: .15rem 0 .15rem 0;
+	border-bottom: 1px solid #eeeeee;
+	border-top: 1px solid #eeeeee;
+}
+
+.forehead li:nth-child(1){
+	width: 3.74rem;
+	float: left;
+}
+.forehead li:nth-child(2){
+	width: 3.75rem;
+	float: right;
+	margin-top:.24rem; 
+}
+.forehead li .tody_money{
+	width: 3.74rem;
+	height: 1.92rem;
+	border-right: 1px solid #eeeeee;
+	margin-top:.24rem; 
+}
+.tody_money p:nth-child(2){
+	margin-left: 1.29rem;
+}
+.tody_num p:nth-child(2){
+	margin-left: .99rem;
+}
+.forehead li p:nth-child(1){
+	font-size: .24rem;
+	color: #181818;
+	margin-left: .3rem;
+
+}
+.forehead li p:nth-child(2){
+	font-size: .72rem;
+	color: #197DEC;
+	margin-top:.4rem; 
+}
+footer{
+	font-size: .20rem;
+	text-align: center;
+	line-height: .9rem;
+	color: rgba(136,136,136,0.90);
+}
+/*我的收入的样式*/

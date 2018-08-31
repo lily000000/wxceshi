@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="yes" name="app-moblie-web-app-capable">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/monthly-report.css" />
+		<link rel="stylesheet" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../css/mui.picker.min.css" />
+		<script type="text/javascript" src="../js/myjs.js" ></script>
+		<title>月销售记录</title>
+		<style>
+			.sale-saleroom{
+				display: flex;
+				justify-content: space-between;
+				margin: auto;
+				border-top: 2px solid #EEEEEE;
+				padding-left: .2rem;
+				padding-right: .2rem;
+				
+			}
+			.sale-saleroom p{
+				color: #5d5d5d;
+				font-size: .3rem;
+				font-weight: bold;
+				line-height: .8rem;
+				
+				
+				
+			}
+			.sale-saleroom p:nth-child(2){
+				color: #ffb23f;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tit_wrap">
+			<div class="area_wrap">
+			<!--	<p>今日销售额（元）</p>-->
+			</div>
+			<!-- <div id='showUserPicker2'><span id='areaResult2'>更多门店</span><span class="mui-icon mui-icon mui-icon-arrowdown"></span></div>-->
+		    <div id='time' class="btn" data-options='{"type":"date"}'><span id='result'>更多门店</span></div>
+		</div>
+		
+		<div class="sales-details">
+			<div class="sales-tit">
+			    <p>今日销售额（元）</p>
+			    <p>88888</p>
+			</div>
+			<ul class="sales-money">
+				<li>
+					<p>刷卡</p>
+					<p>88888888</p>
+				</li>
+				<li>
+					<p>在线</p>
+					<p>88888888</p>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="sale-table">
+			<div class="sale-saleroom">
+				<P>累计销售额</P>
+				<p>88888888888</p>
+			</div>
+			<table>
+				<tr>
+					<td>毛巾机</td>
+					<td>区域</td>
+					<td>激活时间</td>
+					<td>在线额（元）</td>
+				
+					<td></td>
+					
+				</tr>
+				<tr class="consume-detail">
+					<td>文一店</td>
+					<td>222</td>
+					<td>2000</td>
+					<td>100</td>
+					
+					<td><span class="mui-icon mui-icon-forward"></span></td>
+				</tr>
+				<tr class="consume-detail">
+					<td>文二店</td>
+					<td>333</td>
+					<td>20180811</td>
+					<td>100</td>
+					
+					<td><span class="mui-icon mui-icon-forward"></span></td>
+				</tr>
+			</table>
+			
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.3.js" ></script>
+		<script src="../libs/mui.min.js"></script>
+		<script src="../libs/mui.picker.js"></script>
+		<script src="../libs/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../libs/mui.picker.min.js" ></script>
+		<!--<script type="text/javascript" src="../js/todayReport.js" ></script>-->
+		
+		<script>
+			(function($, doc,$$) {
+				$.init();
+				$.ready(function() {
+					//时间选择器
+					var result = $('#result')[0];
+					var btns = $('.btn');
+					var date=new Date;
+					var year=date.getFullYear(); 
+					var month=date.getMonth()+1;
+					var myDate=date.getDate(); 
+					month =(month<10 ? "0"+month:month); 
+					var mydate = (year.toString()+'-'+month.toString()+'-'+ myDate);
+					console.log(mydate)
+				   result.innerText = mydate
+					btns.each(function(i, btn) {
+						btn.addEventListener('tap', function() {
+							var _self = this;
+							if(_self.picker) {
+								_self.picker.show(function (rs) {
+									result.innerText = rs.text;
+									_self.picker.dispose();
+									_self.picker = null;
+								});
+							} else {
+								var optionsJson = this.getAttribute('data-options') || '{}';
+								var options = JSON.parse(optionsJson);
+								var id = this.getAttribute('id');
+								/*
+								 * 首次显示时实例化组件
+								 * 示例为了简洁，将 options 放在了按钮的 dom 上
+								 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+								 */
+								_self.picker = new $.DtPicker(options);
+								_self.picker.show(function(rs) {
+									/*
+									 * rs.value 拼合后的 value
+									 * rs.text 拼合后的 text
+									 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+									 * rs.m 月，用法同年
+									 * rs.d 日，用法同年
+									 * rs.h 时，用法同年
+									 * rs.i 分（minutes 的第二个字母），用法同年
+									 */
+									result.innerText = rs.text;
+									/* 
+									 * 返回 false 可以阻止选择框的关闭
+									 * return false;
+									 */
+									/*
+									 * 释放组件资源，释放后将将不能再操作组件
+									 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+									 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+									 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+									 */
+									_self.picker.dispose();
+									_self.picker = null;
+								});
+							}
+							
+						}, false);
+					
+					});
+					
+					$$('.consume-detail').on('tap',function(){
+						window.location.href ='machine-details.html'
+						
+					})
+				})		
+			})(mui, document,jQuery);
+			
+						
+		</script>
+		
+	</body>
+</html>
